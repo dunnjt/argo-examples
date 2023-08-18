@@ -8,7 +8,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: mycontainer
-        image: "519400232874.dkr.ecr.us-east-1.amazonaws.com/backplane-example-service:snapshot.8b37413c46351e98b363e6625eacea80b88e6841"
+        image: ""
         ports:
         - containerPort: 8080
         envFrom:
