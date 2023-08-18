@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backplane-example
+spec:
+  replicas: 1
+  template:
+    spec: # Pod spec
+      containers:
+      - name: mycontainer
+        image: "519400232874.dkr.ecr.us-east-1.amazonaws.com/backplane-example-service:snapshot.8b37413c46351e98b363e6625eacea80b88e6841"
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: backplane-example
+        resources:
+          requests:
+            memory: "128Mi" 
+            cpu: "1"    # 500milliCPUs (1/2 CPU)
+          limits:
+            memory: "512Mi"
+            cpu: "2"

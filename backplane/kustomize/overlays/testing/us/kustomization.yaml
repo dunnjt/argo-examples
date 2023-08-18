@@ -1,0 +1,9 @@
+bases:
+- ../../../base
+
+patches:
+ - replicas.yaml
+
+configMapGenerator:
+- name: backplane-example
+  env: config.properties

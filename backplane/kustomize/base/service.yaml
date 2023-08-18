@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backplane-example
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    name: backplane-example
+  type: NodePort
