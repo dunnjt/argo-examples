@@ -1,0 +1,9 @@
+bases:
+- ../../../base
+
+patchesStrategicMerge:
+ - replicas.yaml
+
+configMapGenerator:
+- name: backplane-example-service
+  env: config.properties
