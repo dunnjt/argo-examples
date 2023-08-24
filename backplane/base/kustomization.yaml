@@ -14,7 +14,7 @@ namePrefix:
 nameSuffix:
   -v1
 
-images:
-  - name: mycontainer
-    newName: devopsjourney1/mywebapp
-    newTag: wwwwwww
+# images:
+#   - name: mycontainer
+#     newName: devopsjourney1/mywebapp
+#     newTag: wwwwwww
