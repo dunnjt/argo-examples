@@ -2,6 +2,5 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backplane-example-service
-  namespace: kustomize
 spec:
   replicas: 2
