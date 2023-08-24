@@ -7,7 +7,7 @@ spec:
   template:
     spec: # Pod spec
       containers:
-      - name: mycontainer
+      - name: devopsjourney1/mywebapp
         image: "devopsjourney1/mywebapp:latest"
         ports:
         - containerPort: 80
