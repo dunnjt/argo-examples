@@ -4,4 +4,4 @@ images:
 - name: devopsjourney1/mywebapp
   newTag: testing_dir
 resources:
-- ../../../base
+- ../../base
