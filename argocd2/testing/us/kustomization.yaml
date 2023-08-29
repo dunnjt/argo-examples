@@ -1,0 +1,10 @@
+configMapGenerator:
+- envs:
+  - config.properties
+  name: backplane-example-service
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../version
+patches:
+- path: replicas.yaml
