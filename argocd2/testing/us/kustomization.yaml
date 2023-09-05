@@ -11,6 +11,6 @@ kind: Kustomization
 resources:
 # - ../version
 # - https://github.com/dunnjt/argo-version/version?ref=main
-- https://$GIT_USER@github.com/reifyhealth/argocd-ops/backplane-example-service/testing?ref=main
+- https://github.com/reifyhealth/argocd-ops/backplane-example-service/testing?ref=main
 patches:
 - path: replicas.yaml
