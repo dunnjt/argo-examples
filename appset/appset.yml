@@ -22,7 +22,7 @@ spec:
       source:
         path: argocd2/testing/us
         repoURL:  https://github.com/dunnjt/argo-examples
-        targetRevision: main
+        targetRevision: master
       destination:
         server: '{{server}}'
         namespace: kustomize
