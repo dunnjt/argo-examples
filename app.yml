@@ -11,7 +11,7 @@ spec:
   # The project the application belongs to.
   project: default
   source:
-    repoURL: https://github.com/reifyhealth/argo-examples
+    repoURL: https://github.com/dunnjt/argo-examples
     targetRevision: main
     path: appset
   destination:
