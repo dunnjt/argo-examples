@@ -6,6 +6,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 # - ../version
-- https://github.com/dunnjt/argo-version/version?ref=main
+# - https://github.com/dunnjt/argo-version/version?ref=main
+- https://github.com/reifyhealth/argocd-ops/backplane-example-service/testing?ref=main
 patches:
 - path: replicas.yaml
