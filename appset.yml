@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: backplane-example-appset
+spec:
+  generators:
+  - list:
+      # Parameters are generated based on this cluster list, to be substituted
+      # into the template below.
+      elements:
+      - cluster: testing
+        server: https://kubernetes.default.svc
+        environment: testing
+        region: us
+  template:
+    # An Argo CD Application template, with support for parameter substitution
+    # with values from parameters generated above.
+    metadata:
+      name: 'backplane-example-service-{{region}}-{{environment}}'
+    spec:
+      project: default
+      source:
+        path: argocd2/testing/us
+        repoURL:  https://github.com/reifyhealth/argo-examples
+        targetRevision: main
+      destination:
+        server: '{{server}}'
+        namespace: kustomize
+  env:
+  - name: REIFYROBOT_GIT_PASS
+    valueFrom:
+      secretKeyRef:
+        name: reifyrobot-pass
+        key: password
